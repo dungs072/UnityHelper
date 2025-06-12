@@ -1,8 +1,12 @@
 {
   "name": "unity-helper",
-  "displayName": "Unity Helper",
+  "displayName": "unity-helper",
   "publisher": "dungs72",
   "description": "VSCode extension to help game development in Unity",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dungs072/UnityHelper"
+  },
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.100.0"
@@ -11,7 +15,7 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:UnityHelper.addDebugLog",
+    "onCommand:unityDebugLog.addDebugLog",  
     "onLanguage:csharp"
   ],
   "main": "./dist/extension.js",
@@ -21,14 +25,14 @@
         "command": "UnityHelper.addDebugLog",
         "title": "Add Unity Debug Log"
       }
-    ],
+    ], 
     "keybindings": [
-      {
-        "command": "UnityHelper.addDebugLog",
-        "key": "ctrl+alt+a",
-        "when": "editorTextFocus"
-      }
-    ]
+    {
+      "command": "unityDebugLog.addDebugLog",
+      "key": "ctrl+alt+a",
+      "when": "editorTextFocus"
+    }
+  ]
   },
   "scripts": {
     "vscode:prepublish": "npm run package",
